@@ -2,7 +2,7 @@
 
 ## 1. What Does a GPU Do?
 
-GPU (Graphics Processing Unit), đã trở thành một phần quan trọng trong công nghệ điện toán cho cá nhân và kinh tế số. Được thiết kế để xử lý song song, GPU được xử dụng cho các ứng dụng như xử lý đồ họa, trích xuất video. 
+GPU (Graphics Processing Unit), đã trở thành một phần quan trọng trong công nghệ điện toán cho cá nhân và kinh tế số. Được thiết kế để xử lý song song, GPU được sử dụng cho các ứng dụng như xử lý đồ họa, trích xuất video. 
 Mọi người thường biết đến GPU với khả năng tối ưu và hỗ trợ đồ họa cho Game. Nhưng hiện nay GPU trở nên phổ biến hơn với việc sử dụng để sáng tạo nội dung (video, hình ảnh) và xu thế hiện nay là Trí tuệ nhân tạo (AI - Artical Intelligence). 
 
 GPU ban đầu chỉ được thiết kết với mục đích tối ưu xử lý đồ họa 3D. Nhưng qua thời gian, GPU trở nên linh hoạt hơn và có thể lập trình, và được cải thiện nhiều về tính năng. Việc này cho phép các lập trình viên đồ họa có thể xây dựng các hiệu ứng hình ảnh thú vị và thực tế hơn với các kỹ thuật nâng cao cho ánh sáng và bóng râm. 
@@ -10,15 +10,15 @@ Các Developer đang bắt đầu khai thác năng lực của GPU để tăng t
 
 2 thập kỉ trước, GPU được sử dụng chính cho tối ưu ứng dụng 3D real-time, như game. Nhưng hiện nay, các nhà khoa học máy tính nhận ra GPU có tiềm năng giải quyết các vấn đề tính toán khó khăn nhất thế giới.
 
-- GPUs for Gaming: 
+
 ## 2. GPU and CPU: Working Together
 
 GPU và CPU có nhiều điểm chung. Cả hai đều là thành phần tính toán quan trọng, là bộ vi xử lý và đều có khả năng xử lý dữ liệu. Nhưng CPU và GPU lại có kiến trúc và được xây dựng dựa trên mục đích khác nhau.
 
 ![CPUvsGPU](../images/GPU-overview01.png)
 
-| | | |
-|-|-|-|
+| | |
+|-|-|
 |__CPU__| __GPU__ |
 | Central Processing Unit | Graphics Processing Unit |
 | Several cores | Several cores|
