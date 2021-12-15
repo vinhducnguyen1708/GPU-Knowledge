@@ -38,6 +38,18 @@ GPU có 2 dạng cơ bản: integrated và discrete.
 - Intergrated GPU không được tách ra thành một card mà thay vào đó là được nhúng, hàn liền vào bo mạch vùng CPU. 
 - Discrete GPU là một chip riêng biệt được gắn trên bảng mạch riêng và được lắp vào bảng mạch CPU thông qua PCIe. 
 
+## 4. GPU Architecture
+
+
+![CPUvsGPU](../images/GPU-overview02.png)
+
+
+Một GPU bao gồm nhiều Processor Cluster (PC) chứa nhiều Streaming Multiprocessors (SM). Mỗi SM chứa một cache Layer1 và các CUDA cores liên kết với nhau. Thông thường một SM sử dụng cache L1 của mình và cache L2 dùng chung trước khi kéo dữ liệu từ GDDR5 Memory. Kiến trúc này giúp giảm thiểu độ trễ memory.
+
+Nhìn vào số lượng core có thể xác định được khả năng tính toán song song của GPU. Khi kiểm định với card V100 NVIDIA, có chứa 80 SM, mỗi SM chứa 64 cores nên sẽ có tổng 5120 CUDA cores (số CUDA core trên một SM giờ đã được giảm từ 128 xuống còn 64). Một tác vụ cần xử lý sẽ không được schedule vào một core riêng lẻ mà sẽ tương tác với cluster hoặc SM, đó là cách GPU có thể xử lý song song song.
+
+Các CUDA cores này có thể xử lý tính toán cho cả các bài toán Intergers và floating point. CUDA cores trong kiến trúc Amphere có thể xử lý FP64, FP32 hoặc INT trên clock cycle.
+
 ---
 ## 
 [1]. https://www.intel.vn/content/www/vn/vi/products/docs/processors/what-is-a-gpu.html
@@ -49,3 +61,7 @@ GPU có 2 dạng cơ bản: integrated và discrete.
 [4]. https://www.thegioimaychu.vn/tin-tuc/giong-va-khac-nhau-giua-gpu-va-cpu.html
 
 [5]. https://www.omnisci.com/technical-glossary/cpu-vs-gpu
+
+[6]. https://www.techcenturion.com/nvidia-cuda-cores/
+
+[7]. https://core.vmware.com/resource/exploring-gpu-architecture#section4
